@@ -1,4 +1,10 @@
-// Genie progress bar example - activity mode
+/* -*- Mode: Genie; indent-tabs-mode: nil; c-basic-offset: 4; tab-width: 4 -*- */
+/* vim: set tabstop=4 softtabstop=4 shiftwidth=4 expandtab : */ 
+/* 
+ * genie-progress-bar.gs 
+ *
+ * Genie progress bar example - activity mode
+ */
 
 uses Gtk
 
