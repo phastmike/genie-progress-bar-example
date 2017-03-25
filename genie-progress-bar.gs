@@ -1,8 +1,4 @@
 // Genie progress bar example - activity mode
-// This was the reply to a request on Vala mailing list to show how someone could use
-// Gtk.ProgressBar while parsing a vcard file.
-// Parser classe simulates a 'long task' for 10 seconds and in the meantime we pulse activity.
-// Very simple example.
 
 uses Gtk
 
