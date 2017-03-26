@@ -31,17 +31,17 @@ class MainAppWindow : Window
 
 		add (grid)
 		destroy.connect (Gtk.main_quit)
-		Timeout.add (50, lambda_pb_pulse);
+		Timeout.add (50, pb_pulse);
 
 		var parser = new Parser ()
-		parser.parse_ended.connect (lambda_on_parse_ended)
+		parser.parse_ended.connect (on_parse_ended)
 		parser.parse ()
 
-	def lambda_pb_pulse () : bool
+	def pb_pulse () : bool
 		progress_bar.pulse ()
 		return true
 
-	def lambda_on_parse_ended ()
+	def on_parse_ended ()
 		Gtk.main_quit ()
 
 class Parser : Object
@@ -51,9 +51,9 @@ class Parser : Object
 	def parse ()
 		counter = 0
 		print ("Start parsing..")
-		Timeout.add_seconds (1, lambda_counter)
+		Timeout.add_seconds (1, work_counter)
 
-	def lambda_counter () : bool
+	def work_counter () : bool
 		counter += 1
 		print ("Counter %d", counter)
 		if counter < 10
